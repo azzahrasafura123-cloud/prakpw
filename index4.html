@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      border: 2px dashed gray;
+      padding: 10px;
+      margin-bottom: 30px;
+      background: white;
+      height: 350px; /* biar kelihatan efek align-items dan align-content */
+    }
+
+    .box {
+      width: 60px;
+      height: 60px;
+      background: steelblue;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    /* Variasi */
+    .direction { }
+    .wrap      { wrap-content: center}
+    .justify   { justify-content: center}
+    .alignItems{baseline-shift: ; }
+    .alignContent{ 
+      flex-wrap: wrap; 
+    }
+  </style>
+</head>
+<body>
+  <h2>1. flex-direction</h2>
+  <div class="container direction">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
+
+  <h2>2. flex-wrap</h2>
+  <div class="container wrap" style="width:250px;">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
+
+  <h2>3. justify-content</h2>
+  <div class="container justify">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <h2>4. align-items (cross axis / Y)</h2>
+  <div class="container alignItems">
+    <div class="box">A</div>
+    <div class="box" style="height:90px;">B</div>
+    <div class="box" style="font-size:xx-large;">C</div>
+  </div>
+
+  <h2>5. align-content (butuh wrap + tinggi container lebih besar)</h2>
+  <div class="container alignContent" style="width:250px;">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+  </div>
+</body>
+</html>

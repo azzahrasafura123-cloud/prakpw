@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.user-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.note {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 6px 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.toggle-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.text-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Styling Tombol */
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4f46e5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+/* :first-child -> Memberi warna background khusus pada elemen pertama */
+.user-item:first-child {
+  background-color: #e0e7ff;
+}
+
+/* :last-child -> Menghilangkan garis bawah pada elemen terakhir */
+.user-item:last-child {
+  border-bottom: none;
+}
+
+/* :nth-child() -> mewarnai elemen genap (baris ke-2, 4, dst) */
+.user-item:nth-child(even) {
+  font-weight: bold;
+}
+
+/* :not() -> memberi indikator panah pada semua item KECUALI item pertama */
+.user-item:not(:first-child)::before {
+  content: "• ";
+  color: #4f46e5;
+}
+
+/* :has() -> mengubah border card jika checkbox di dalamnya di-check */
+.card:has(.checkbox-input:checked) {
+  border-color: #4f46e5;
+}
+
+/*  :nth-of-type() */
+.card > p:nth-of-type(2) {
+  color: #d97706; 
+  font-weight: bold;
+}
+
+/* :checked -> Mengubah warna teks label saat checkbox dicentang */
+.checkbox-input:checked + span {
+  color: #4f46e5;
+  font-weight: bold;
+}
+
+/* :disabled -> Tampilan khusus untuk input yang dinonaktifkan */
+.text-input:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* :hover -> Efek saat kursor berada di atas tombol */
+.btn:hover {
+  background-color: #4338ca;
+}
+
+/* :active -> Efek tombol tertekan saat diklik */
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* :focus-visible -> Indikator aksesibilitas saat tombol difokuskan lewat keyboard (Tab) */
+.btn:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}

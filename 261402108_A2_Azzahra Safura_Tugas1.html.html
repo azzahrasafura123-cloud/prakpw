@@ -1,0 +1,121 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Pemesanan Sederhana</title>
+</head>
+<body>
+                <!-- JUDUL FORMAT PEMESANAN -->
+    <h1 style="text-align: center;">Halaman Pemesanan</h1>
+        <hr><br>
+        
+    <form action="">
+        <table cellpadding="6">
+            
+                   <!-- 1.NAMA PELANGGAN -->
+            <tr>
+              <td><label for="Nama">Nama Pelanggan</label></td>
+              <td>:</td>
+              <td><input type="text" name="Nama" id="Nama"></td>
+            </tr>
+
+                   <!-- 2.EMAIL PELANGGAN -->
+            <tr>
+              <td><label for="Email">Email Pelanggan</label></td>
+              <td>:</td>
+              <td><input type="email" name="Email" id="Email"></td>
+            </tr>
+
+                   <!-- 3.NO HP PELANGGAN -->
+            <tr>
+              <td><label for="Telepon">No HP Pelanggan</label></td>
+              <td>:</td>
+              <td><input type="tel" name="Telepon" id="Telepon"></td>
+            </tr>
+            
+                   <!-- 4.PILIHAN PRODUK -->
+            <tr>
+              <td valign="top"><label>Produk Frozen Food</label></td>
+              <td valign="top">:</td>
+              <td>
+              <input type="radio" name="produk" id="Nugget" value="Nugget Ayam">
+              <label for="Nugget">Nugget Ayam</label><br>
+              <input type="radio" name="produk" id="Sosis" value="Sosis">
+              <label for="Sosis">Sosis</label><br>
+              <input type="radio" name="produk" id="Kentang" value="Kentang">
+              <label for="Kentang">Kentang</label><br>
+              <input type="radio" name="produk" id="Tempura" value="Tempura">
+              <label for="Tempura">Tempura</label><br>
+              <input type="radio" name="produk" id="Bakso" value="Bakso">
+              <label for="Bakso">Bakso</label><br>
+              <input type="radio" name="produk" id="Dimsum" value="Dimsum">
+              <label for="Dimsum">Dimsum</label>
+              </td>
+            </tr>
+
+                  <!-- 5.TANGGAL PENGAMBILAN PESANAN -->
+            <tr>
+              <td><label for="Tanggal">Tanggal Pengambilan Pesanan</label></td>
+              <td>:</td>
+              <td><input type="date" name="Tanggal" id="Tanggal"></td>
+            </tr> 
+
+                  <!-- 6.WAKTU PENGAMBILAN PESANAN -->
+            <tr>
+              <td><label for="Waktu">Waktu Pengambilan Pesanan</label></td>
+              <td>:</td>
+              <td><input type="time" name="Waktu" id="Waktu"></td>
+            </tr>
+
+                  <!-- 7.JUMLAH PRODUK -->
+            <tr>
+              <td><label for="Jumlah">Jumlah Produk</label></td>
+              <td>:</td>
+              <td><input type="number" name="Jumlah" id="Jumlah"></td>
+            </tr>
+
+                <!-- 8.METODE PENGAMBILAN PESANAN -->
+            <tr>
+              <td valign="top"><label>Metode Pengambilan Pesanan</label></td>
+              <td valign="top">:</td>
+              <td>
+              <input type="radio" name="metode" id="Diambil" value="Diambil di Toko">
+              <label for="Diambil">Diambil di Toko</label><br>
+              <input type="radio" name="metode" id="Diantar" value="Diantar ke Rumah">
+              <label for="Diantar">Diantar ke Rumah</label>
+              </td>
+            </tr>
+
+                   <!-- 9.PILIHAN TAMBAHAN -->
+            <tr>
+              <td valign="top"><label>Pilihan Tambahan</label></td>
+              <td valign="top">:</td>
+              <td>
+              <input type="checkbox" name="Tambahan" id="Saus-Sambal" value="Saus Sambal">
+              <label for="Saus-Sambal">Saus Sambal</label><br>
+              <input type="checkbox" name="Tambahan" id="Mayonnaise" value="Mayonnaise">
+              <label for="Mayonnaise">Mayonnaise</label><br>
+              <input type="checkbox" name="Tambahan" id="Saus-Keju" value="Saus Keju">
+              <label for="Saus-Keju">Saus Keju</label>
+              </td>
+            </tr>
+
+                  <!-- 10.BUKTI PEMBAYARAN -->
+            <tr>
+              <td><label for="file">Upload Bukti Pembayaran</label></td>
+              <td>:</td>
+              <td><input type="file" name="file" id="file"></td>
+            </tr>
+
+                  <!-- TOMBOL KIRIM DAN HAPUS -->
+            <tr>
+              <td colspan="3" align="center">
+                <button type="submit" name="Kirim">Kirim Pesanan</button>
+                <button type="reset" name="Hapus">Hapus Pesanan</button>
+              </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

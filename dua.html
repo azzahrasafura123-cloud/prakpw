@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f9; }
+        .box { background: white; padding: 20px; border-radius: 8px; width: 300px; margin: auto; }
+        button { margin: 5px; padding: 8px 12px; cursor: pointer; }
+        .merah { color: red; font-weight: bold; }
+        .hijau { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2 id="judul">Pencatat Catatan</h2>
+        <p id="teksUser">Pengguna: Anonim</p>
+
+        <button id="btnLogin">1. Login</button>
+        <button id="btnTambah">2. Tambah Catatan</button>
+        <hr>
+        <p id="statusTotal">Total Catatan: 0</p>
+        <ul id="daftarCatatan"></ul>
+    </div>
+    <script>
+        let namaUser = "";
+        let dataCatatan = [];
+
+        function loginUser(){
+            namaUser = prompt("Masukkan nama lo");
+
+            if (namaUser !== null && namaUser !== ""){
+                alert("Selamat datang, " + namaUser + "!");
+                console.log("Sistem siap digunakan");
+
+                document.getElementById("teksUser").textContent = "Pengguna: " + namaUser;
+            } else {alert("Jangan kosoonggg")}
+        }
+
+        const btnLogin = document.getElementById("btnLogin");
+        const btnTambah = document.getElementById("btnTambah");
+
+        btnLogin.addEventListener("click", loginUser);
+
+        btnTambah.addEventListener("click", function(){
+            if (namaUser === ""){
+                alert("Wajib login dulu")
+                return;
+            }
+
+            let teks = prompt("Masukkan catatan anda")
+            if (teks) {
+                dataCatatan.push(teks);
+
+                const listHTML = document.getElementById("daftarCatatan");
+                const statusTotal= document.getElementById("statusTotal");
+
+                listHTML.innerHTML = "";
+
+                for (let i = 0; i < dataCatatan.length; i++){
+                    let li = document.createElement("li");
+                    li.textContent = dataCatatan[i];
+                    listHTML.appendChild(li);
+                }
+
+                let total = dataCatatan.length;
+                statusTotal.textContent = "Total Catatan: " + total;
+
+                if (total >= 3){
+                    statusTotal.className = "hijau";
+                } else {
+                    statusTotal.className = "merah"
+                }
+            }
+        }
+    );
+    </script>
+</body>
+</html>

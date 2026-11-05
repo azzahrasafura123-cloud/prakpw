@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Pseudo-Class CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Parent Container -->
+  <main class="card">
+    
+    <h2>Daftar Anggota</h2>
+    
+    <ul class="user-list">
+      <li class="user-item">Budi Santoso</li>
+      <li class="user-item">Siti Rahma</li>
+      <li class="user-item">Ahmad Rizky</li>
+      <li class="user-item">Dewi Lestari</li>
+    </ul>
+
+    <!-- Penambahan beberapa tag <p> dan <span> di dalam .card untuk latihan :nth-of-type -->
+    <p class="note">Catatan 1: Pastikan data diri sudah sesuai.</p>
+    <p class="note">Catatan 2: Kode promo bersifat terbatas.</p>
+    <p class="note">Catatan 3: Hubungi admin jika ada kendala.</p>
+
+    <hr>
+
+    <h2>Formulir Kontak</h2>
+    
+    <form class="contact-form">
+      <label class="toggle-option">
+        <input type="checkbox" id="subscribe" class="checkbox-input">
+        <span>Berlangganan Newsletter</span>
+      </label>
+
+      <div class="field-group">
+        <label for="promo">Kode Promo (Nonaktif):</label>
+        <input type="text" id="promo" value="DISKON10" disabled class="text-input">
+      </div>
+
+      <div class="action-group">
+        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+      </div>
+    </form>
+
+  </main>
+
+</body>
+</html>
